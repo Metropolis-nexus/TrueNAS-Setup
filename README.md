@@ -39,6 +39,7 @@ The intial setup script to be run after installation is maintained [here](https:
 - System -> Advanced Settings -> Console
     - Enable Serial Console
     - Serial Speed -> 115200
+    - Access -> Set session timeout to 14400 (4 hours)
     - Global Two Factor Authentication -> Enable Two Factor Authentication Globally
 
 - System -> Services
