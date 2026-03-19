@@ -48,6 +48,8 @@
         - Username Attribute -> cn
         - UID Attribute -> uidNumber
         - GID Attribute -> gidNumber
+        - Home Directory Attribute -> homeDirectory
+        - Last Change Attribute -> pwdChangedTime
         - Group Object Class -> group
         - Group GID Attribute -> gidNumber
         - Group Member Attribute -> member
