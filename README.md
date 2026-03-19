@@ -20,6 +20,36 @@
     - Add email
     - Add SSH keys
 
+- Credentials -> Directory Services -> Add LDAP
+    - Check "Enable Service"
+    - Check "Enable Account Cache"
+    - Uncheck "Enable DNS Updates"
+    - Credential Type -> LDAP Plain
+    - Bind DN -> `cn=TrueNAS,ou=users,dc=ldap,dc=goauthentik,dc=io`
+    - Server URLs -> `ldap://192.168.0.106`
+    - Base DN -> `dc=ldap,dc=goauthentik,dc=io`
+    - Schema -> RFC2307BIS
+    - Uncheck "Use Standard Auxiliary Parameters"
+        - Auxiliary Parameters
+```
+chpass_provider = ldap
+access_provider = ldap
+ldap_group_name = cn
+ldap_access_order = filter
+ldap_access_filter = memberOf=cn=metropolis_storage,ou=groups,dc=ldap,dc=goauthentik,dc=io
+```
+    - Uncheck "Use Standard Search Bases"
+        - User Base DN -> `ou=users,dc=ldap,dc=goauthentik,dc=io`
+        - Group Base DN -> `dc=ldap,dc=goauthentik,dc=io`
+    - Uncheck "Use Standard Attribute Maps"
+        - User Object Class -> user
+        - Username Attribute -> cn
+        - UID Attribute -> uidNumber
+        - GID Attribute -> gidNumber
+        - Group Object Class -> group
+        - Group GID Attribute -> gidNumber
+        - Group Member Attribute -> member
+
 - System -> General -> GUI
     - Check "Web Interface HTTP -> HTTPS Redirect"
     - Uncheck "Usage Collection"
