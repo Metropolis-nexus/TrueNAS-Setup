@@ -31,13 +31,15 @@
     - Schema -> RFC2307BIS
     - Uncheck "Use Standard Auxiliary Parameters"
         - Auxiliary Parameters
-```
-chpass_provider = ldap
-access_provider = ldap
-ldap_group_name = cn
-ldap_access_order = filter
-ldap_access_filter = memberOf=cn=metropolis_storage,ou=groups,dc=ldap,dc=goauthentik,dc=io
-```
+
+      ```
+      chpass_provider = ldap
+      access_provider = ldap
+      ldap_group_name = cn
+      ldap_access_order = filter
+      ldap_access_filter = memberOf=cn=metropolis_storage,ou=groups,dc=ldap,dc=goauthentik,dc=io
+      ```
+    
     - Uncheck "Use Standard Search Bases"
         - User Base DN -> `ou=users,dc=ldap,dc=goauthentik,dc=io`
         - Group Base DN -> `dc=ldap,dc=goauthentik,dc=io`
