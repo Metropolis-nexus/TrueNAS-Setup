@@ -1,11 +1,5 @@
 # TrueNAS-Setup
 
-## Intial setup script
-
-The intial setup script to be run after installation is maintained [here](https://github.com/Metropolis-nexus/Linux-Setup-Scripts).
-
-## Configure TrueNAS
-
 - truenas_admin -> Two factor authentication -> Configure 2FA Secret
 
 - Storage -> Create Pool
@@ -30,9 +24,6 @@ The intial setup script to be run after installation is maintained [here](https:
     - Check "Web Interface HTTP -> HTTPS Redirect"
     - Uncheck "Usage Collection"
 
-- System -> General -> NTP Servers
-    - Delete all default NTP servers
-
 - System -> General -> Email
     - Configure SMTP notications
 
@@ -42,5 +33,14 @@ The intial setup script to be run after installation is maintained [here](https:
     - Access -> Set session timeout to 14400 (4 hours)
     - Global Two Factor Authentication -> Enable Two Factor Authentication Globally
 
+- System -> Advanced Settings -> NTP Servers
+    - Delete all default NTP servers
+    - Add time.cloudflare.com iburst prefer
+
+- System -> Advanced Settings -> Storage
+    - System Dataset Pool -> boot-pool
+
 - System -> Services
     - Enable SSH
+    - Start SSH
+    - Uncheck "Allow Password Authentication"
