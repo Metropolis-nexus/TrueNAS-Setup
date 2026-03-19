@@ -18,7 +18,6 @@
 
 - Credentials -> Users -> root
     - Add email
-    - Add SSH keys
 
 - Credentials -> Directory Services -> Add LDAP
     - Check "Enable Service"
