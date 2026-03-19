@@ -13,7 +13,10 @@
     - Checksum -> Blake 3
     - Exec -> Off
  
-- Storage -> Schedule Scrub -> At 00:00, only on Sunday, 30 Threadshold Days
+- Storage -> Schedule Scrub -> At 00:30, only on Sunday, 30 Threadshold Days
+
+- Data Protection
+   - Periodic Snapshot Task -> Daily at 00:15, recursive, 2 weeks lifetime
 
 - Network
     - Uncheck all service announcements
