@@ -12,6 +12,8 @@
     - Compression level -> ZFS
     - Checksum -> Blake 3
     - Exec -> Off
+ 
+- Storage -> Schedule Scrub -> At 00:00, only on Sunday, 30 Threadshold Days
 
 - Network
     - Uncheck all service announcements
