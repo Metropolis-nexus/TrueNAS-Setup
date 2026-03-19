@@ -78,3 +78,30 @@
     - Enable SSH
     - Start SSH
     - Uncheck "Allow Password Authentication"
+    - Auxiliary Parameters
+
+    ```
+    # LDAP SSH key
+    AuthorizedKeysCommand /usr/bin/sss_ssh_authorizedkeys
+    AuthorizedKeysCommandUser root
+
+    # Security hardening
+    DisableForwarding yes
+    LoginGraceTime 15s
+    MaxAuthTries 1
+    PermitUserEnvironment no
+    PermitUserRC no
+    StrictModes yes
+
+    # Use KeepAlive over SSH instead of with TCP to prevent spoofing
+    TCPKeepAlive no
+    ClientAliveInterval 15
+    ClientAliveCountMax 4
+
+    # Disabling unused authentication methods
+    GSSAPIAuthentication no
+    HostbasedAuthentication no
+    PermitEmptyPasswords no
+    KbdInteractiveAuthentication no
+    KerberosAuthentication no
+    ```
