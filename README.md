@@ -3,6 +3,7 @@
 - truenas_admin -> Two factor authentication -> Configure 2FA Secret
 
 - Storage -> Create Pool
+    - General Info -> Name -> NAS01
     - General Info -> Check "Encryption" -> AES-256-GCM
     - Data -> Layout -> Choose the appropriate RAIDZ config
 
@@ -14,6 +15,8 @@
     - Exec -> Off
  
 - Storage -> Schedule Scrub -> At 00:30, only on Sunday, 30 Threadshold Days
+
+- Dataset -> Add "Home" child dataset -> Set Quota to something low like 10 GiB
 
 - Data Protection
    - Periodic Snapshot Task -> Daily at 00:15, recursive, 2 weeks lifetime
@@ -42,6 +45,7 @@
       ldap_group_name = cn
       ldap_access_order = filter
       ldap_access_filter = memberOf=cn=metropolis_storage,ou=groups,dc=ldap,dc=goauthentik,dc=io
+      override_homedir = /mnt/NAS01/Home/%u
       ```
     
     - Uncheck "Use Standard Search Bases"
