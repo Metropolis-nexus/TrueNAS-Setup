@@ -13,10 +13,12 @@
     - Compression level -> ZFS
     - Checksum -> Blake 3
     - Exec -> Off
- 
+
 - Storage -> Schedule Scrub -> At 00:30, only on Sunday, 30 Threadshold Days
 
 - Dataset -> Add "Home" child dataset -> Set Quota to something low like 10 GiB
+
+- Set default user homedir quota: `zfs set defaultuserquota=1g NAS01/Home`
 
 - Data Protection
    - Periodic Snapshot Task -> Daily at 00:15, recursive, 2 weeks lifetime
