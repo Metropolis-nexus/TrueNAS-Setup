@@ -13,4 +13,4 @@ To give read access to another user, add these additional ACEs:
 
 ![Additional user read ACL](/Additional-Read.png)
 
-![Additional user execute ACL](/Execute.png)
+![Additional user execute ACL](/Additional-Execute.png)
