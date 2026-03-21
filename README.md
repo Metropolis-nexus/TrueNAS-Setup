@@ -96,6 +96,7 @@
     - File Permissions -> 600
     - Directory Permissions -> 700
     - Enable TLS
+        - Certificate -> Choose the certificate uploaded earlier
     - Check "Allow Transfer Resumption"
 
 - System -> Services
