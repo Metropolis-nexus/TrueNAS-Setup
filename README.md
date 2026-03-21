@@ -6,13 +6,12 @@
     - General Info -> Name -> NAS01
     - General Info -> Check "Encryption" -> AES-256-GCM
     - Data -> Layout -> Choose the appropriate RAIDZ config
-
-- Dataset -> Dataset Details -> Edit -> Advanced Options
-    - Preset -> Generic
-    - Sync -> Always
-    - Compression level -> ZFS
-    - Checksum -> Blake 3
-    - Exec -> Off
+    - Dataset -> Dataset Details -> Edit -> Advanced Options
+        - Preset -> Generic (This will use POSIX ACL, which cannot be changed later. We stick with POSIX ACL for now, since NFSv4 ACL is bespoke. It can be switched for child datasets).
+        - Sync -> Always
+        - Compression level -> ZFS
+        - Checksum -> Blake 3
+        - Exec -> Off
 
 - Storage -> Schedule Scrub -> At 00:30, only on Sunday, 30 Threadshold Days
 
