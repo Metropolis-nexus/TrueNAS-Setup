@@ -63,6 +63,9 @@
         - Group GID Attribute -> gidNumber
         - Group Member Attribute -> member
 
+- Credentials -> Certificates
+    - Manually import certificates from NGINX reverse proxy VM
+
 - System -> General -> GUI
     - Check "Web Interface HTTP -> HTTPS Redirect"
     - Uncheck "Usage Collection"
@@ -82,6 +85,18 @@
 
 - System -> Advanced Settings -> Storage
     - System Dataset Pool -> boot-pool
+
+- System -> Services
+    - Enable FTP
+    - Start FTP
+    - Clients -> 100 (Just an arbitary high number)
+    - Connections -> 5
+    - Uncheck "Always Chroot"
+    - Check "Allow Local User Login"
+    - File Permissions -> 600
+    - Directory Permissions -> 700
+    - Enable TLS
+    - Check "Allow Transfer Resumption"
 
 - System -> Services
     - Enable SSH
