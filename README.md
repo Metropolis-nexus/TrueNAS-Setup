@@ -8,7 +8,7 @@
     - Data -> Layout -> Choose the appropriate RAIDZ config
 
 - Dataset -> Dataset Details -> Edit -> Advanced Options
-    - Preset -> Generic (always use generic for interoperability - NFSv4 ACL is bespoke)
+    - Preset -> Generic
     - Sync -> Always
     - Compression level -> ZFS
     - Checksum -> Blake 3
