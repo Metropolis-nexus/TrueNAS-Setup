@@ -74,6 +74,8 @@
         - Enterprise
 
 - System -> General -> GUI
+    - GUI SSL Certificate -> Choose the certificate uploaded earlier
+    - HTTPS Protocols -> TLSv1.3
     - Check "Web Interface HTTP -> HTTPS Redirect"
     - Uncheck "Usage Collection"
 
