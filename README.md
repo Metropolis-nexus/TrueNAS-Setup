@@ -90,6 +90,14 @@
     - Access -> Set session timeout to 14400 (4 hours)
     - Global Two Factor Authentication -> Enable Two Factor Authentication Globally
 
+- System -> Advanced Settings -> Cron Jobs **(This is a temporary hack job to deal with the home directories being set to 755 when override_homedir is used with SSSD)**
+    - Description: Fix home directory permissions
+    - Command: `for HOMEDIR in /mnt/NAS01/Home/*; do chmod 700 "${HOMEDIR}"; done`
+    - Run As User: root
+    - Daily at 0:00 AM
+    - Hide Standard Output
+    - Enabled
+
 - System -> Advanced Settings -> NTP Servers
     - Delete all default NTP servers
     - Add time.cloudflare.com iburst prefer
