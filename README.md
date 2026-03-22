@@ -66,6 +66,13 @@
 - Credentials -> Certificates
     - Manually import certificates from NGINX reverse proxy VM
 
+- Apps
+    - Choose NAS01 as the pool
+    - Configuration -> Settings -> Preferred Trains
+        - Stable
+        - Community
+        - Enterprise
+
 - System -> General -> GUI
     - Check "Web Interface HTTP -> HTTPS Redirect"
     - Uncheck "Usage Collection"
@@ -86,20 +93,21 @@
 - System -> Advanced Settings -> Storage
     - System Dataset Pool -> boot-pool
 
-- System -> Services
-    - Enable FTP
-    - Start FTP
-    - Clients -> 100 (Just an arbitary high number)
-    - Connections -> 5
+- System -> Services -> FTP (This is just pre-configuring. FTP is not used at the moment.)
+    - Clients -> 30 (Just an arbitary high number)
+    - Connections -> 0
     - Uncheck "Always Chroot"
     - Check "Allow Local User Login"
     - File Permissions -> 600
     - Directory Permissions -> 700
     - Enable TLS
         - Certificate -> Choose the certificate uploaded earlier
+    - Minimum Passive Port -> 21000
+    - Maximum Passive Port -> 21029
     - Check "Allow Transfer Resumption"
+    - Masquerade Address -> Set to the external IP address
 
-- System -> Services
+- System -> Services -> SSH
     - Enable SSH
     - Start SSH
     - Uncheck "Allow Password Authentication"
