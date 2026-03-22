@@ -26,7 +26,9 @@
     - Uncheck all service announcements
 
 - Credentials -> Users -> root
+    - Allow SSH access
     - Add email
+    - Add NGINX's SSH public key
 
 - Credentials -> Directory Services -> Add LDAP
     - Check "Enable Service"
