@@ -149,3 +149,5 @@
     KbdInteractiveAuthentication no
     KerberosAuthentication no
     ```
+
+- System -> Alert Settings -> Remove SNMP Trap
