@@ -32,7 +32,7 @@
 
 - Credentials -> Directory Services -> Add LDAP
     - Check "Enable Service"
-    - Check "Enable Account Cache"
+    - Uncheck "Enable Account Cache"
     - Uncheck "Enable DNS Updates"
     - Credential Type -> LDAP Plain
     - Bind DN -> `cn=TrueNAS,ou=users,dc=ldap,dc=goauthentik,dc=io`
@@ -59,7 +59,6 @@
         - Username Attribute -> cn
         - UID Attribute -> uidNumber
         - GID Attribute -> gidNumber
-        - Home Directory Attribute -> homeDirectory
         - Last Change Attribute -> pwdChangedTime
         - Group Object Class -> group
         - Group GID Attribute -> gidNumber
