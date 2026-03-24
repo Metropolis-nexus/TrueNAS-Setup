@@ -7,10 +7,9 @@
     - General Info -> Check "Encryption" -> AES-256-GCM
     - Data -> Layout -> Choose the appropriate RAIDZ config
 
-- Dataset -> Dataset Details -> Edit -> Advanced Options
-  - Preset -> Generic (This will use POSIX ACL, which cannot be changed later. We stick with POSIX ACL for now, since NFSv4 ACL is bespoke. It can be switched for child datasets).
+- Dataset -> NAS01 -> Dataset Details -> Edit -> Advanced Options
     - Sync -> Always
-    - Compression level -> ZFS
+    - Compression level -> ZSTD
     - Checksum -> Blake 3
     - Exec -> Off
 
@@ -67,13 +66,6 @@
 
 - Credentials -> Certificates
     - Manually import certificates from NGINX reverse proxy VM
-
-- Apps
-    - Choose NAS01 as the pool
-    - Configuration -> Settings -> Preferred Trains
-        - Stable
-        - Community
-        - Enterprise
 
 - System -> General -> GUI
     - GUI SSL Certificate -> Choose the certificate uploaded earlier
@@ -152,3 +144,25 @@
     ```
 
 - System -> Alert Settings -> Remove SNMP Trap
+
+## Apps
+
+- Add a second virtual disk backed by SSDs in Proxmox
+- Edit `/etc/pve/qemu-server/<vmid>.conf` and add `,serial=00000000000000000001` to the new disk configuration
+
+- Storage -> Create Pool
+    - General Info -> Name -> Apps
+    - Data -> Layout -> Stripe
+
+- Dataset -> Apps -> Dataset Details -> Edit -> Advanced Options
+    - Sync -> Disabled
+    - Compression level -> Off
+    - Checksum -> Blake 3
+    - Exec -> Off
+
+- Apps
+    - Choose Apps as the pool
+    - Configuration -> Settings -> Preferred Trains
+        - Stable
+        - Community
+        - Enterprise
