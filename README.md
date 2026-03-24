@@ -13,7 +13,7 @@
     - Checksum -> Blake 3
     - Exec -> Off
 
-- Storage -> Schedule Scrub -> At 00:30, only on Sunday, 30 Threadshold Days
+- Storage -> NAS01 -> Schedule Scrub -> At 00:30, only on Sunday, 30 Threadshold Days
 
 - Dataset -> Add "Home" child dataset -> Set Quota to something low like 10 GiB
 
@@ -153,6 +153,8 @@
 - Storage -> Create Pool
     - General Info -> Name -> Apps
     - Data -> Layout -> Stripe
+
+- Storage -> Apps -> Disable scrubbing schedule
 
 - Dataset -> Apps -> Dataset Details -> Edit -> Advanced Options
     - Sync -> Disabled
