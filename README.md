@@ -77,7 +77,8 @@
     - Configure SMTP notications
 
 - System -> Advanced Settings -> Console
-    - Enable Serial Console
+    - Uncheck "Show Text Console without Password Prompt" (Necessary as we have GPU passthrough and do not want the text console be available without authentication through the HDMI or Display ports)
+    - Check "Enable Serial Console"
     - Serial Speed -> 115200
     - Access -> Set session timeout to 14400 (4 hours)
     - Global Two Factor Authentication -> Enable Two Factor Authentication Globally
