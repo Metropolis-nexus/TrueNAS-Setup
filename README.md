@@ -150,6 +150,8 @@
 - Add a second virtual disk backed by SSDs in Proxmox
 - Edit `/etc/pve/qemu-server/<vmid>.conf` and add `,serial=00000000000000000001` to the new disk configuration
 
+- Turn the VM off, then back on to apply the new configuration
+
 - Storage -> Create Pool
     - General Info -> Name -> Apps
     - Data -> Layout -> Stripe
