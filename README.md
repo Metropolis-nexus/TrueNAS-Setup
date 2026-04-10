@@ -167,6 +167,10 @@
 
 - Apps
     - Choose Apps as the pool
+    - Run:
+      ```bash
+      chmod 700 /mnt/.ix-apps
+      ```
     - Configuration -> Settings -> Preferred Trains
         - Stable
         - Community
