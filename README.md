@@ -157,7 +157,9 @@
     - General Info -> Name -> Apps
     - Data -> Layout -> Stripe
 
-- Storage -> Apps -> Disable scrubbing schedule
+- Storage -> Apps
+    - Disable scrubbing schedule
+    - Enable Auto TRIM
 
 - Dataset -> Apps -> Dataset Details -> Edit -> Advanced Options
     - Sync -> Disabled
