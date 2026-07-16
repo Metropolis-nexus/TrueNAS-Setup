@@ -73,6 +73,9 @@
     - Check "Web Interface HTTP -> HTTPS Redirect"
     - Uncheck "Usage Collection"
 
+- Credentials -> Certificates
+    - Delete the `truenas_default` certificate.
+
 - System -> General -> Email
     - Configure SMTP notications
 
