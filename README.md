@@ -129,7 +129,7 @@
     # Security hardening
     DisableForwarding yes
     LoginGraceTime 15s
-    MaxAuthTries 1
+    #MaxAuthTries 1
     PermitUserEnvironment no
     PermitUserRC no
     StrictModes yes
